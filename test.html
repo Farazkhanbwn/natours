@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testing</title>
-    <style>
+    <!-- <style>
         *{
             padding: 0;
             margin: 0;
@@ -24,10 +24,43 @@
             background-color: #18b4ac;
             margin: 3px;
         }
+    </style> -->
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+
+        div:not(:last-child){
+            margin-bottom: 5px;
+        }
+
+        .main{
+            transition: all .2s;
+            text-align: center;
+        }
+
+        .paragraph{
+            /* width: 200px; */
+            /* height: 50px; */
+            display: inline-block;
+            font-weight: 700;
+            font-size: 20px;
+            background-image: linear-gradient(to right , rgb(47, 109, 104) , rgb(48, 163, 179));
+            -webkit-background-clip: text;
+            color: transparent;
+           
+        }
+
+        .paragraph:hover{
+            /* transform: skewX(20deg) scaleY(1.5); */
+            transform: skewY(5deg) skew(10deg) scale(1.2);
+        }
     </style>
 </head>
 <body>
-    <section class="testing-class">
+    <!-- <section class="testing-class">
         <div style="float: left; opacity: 0.3;background-color: blue;"></div>
         <div ></div>
         <div style="float: left; background-color: rgb(204, 204, 107);"></div>
@@ -35,6 +68,11 @@
         <div></div>
     </section>
     <div></div>
-    
-</body>
+     -->
+     <section class="main">
+        <div class="transform"></div>
+        <div class="test"></div>
+        <p class="paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+     </section>
+    </body>
 </html>
