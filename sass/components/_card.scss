@@ -100,4 +100,44 @@
             }
         }
     }
-} 
+
+    //Front Side Styling
+    &__cta{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+    }
+}
+
+// // Testing button Created 
+// .btn2{
+//     &:link ,
+//     &:visited{
+//         text-transform: uppercase;
+//         text-decoration: none;
+//         padding: 1.5rem 4rem;
+//         display: inline-block;
+//         border-radius: 10rem;
+//         transition: all 0.2s;
+//         position: relative;
+//         font-size: $default-font-size;
+//     }
+    
+//     &:hover{
+//         transform: translateY(-.3rem);
+//         box-shadow: 0rem 1rem 2rem rgba($color-black, 0.2);
+
+//         &::after{
+//             background-color: $color-primary-white;
+//             color: $color-grey-dark;
+//             transform: scaleX(1.4) scaleY(1.6);
+//             opacity: 0;
+//         }
+//     }
+    
+//     &:active{
+//         transform: translateY(-.1rem);
+//         box-shadow: 0rem .5rem 1rem rgba($color-black, 0.2);
+//     }
+// }

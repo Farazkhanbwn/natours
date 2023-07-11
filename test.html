@@ -26,20 +26,51 @@
         }
     </style> -->
     <style>
-        div{
+
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        
+        .main{
+            position: relative;
+            text-align: center;
+            perspective: 1500px;
+            height: 200px;
+            width: 200px;
+            -webkit-perspective: 1500px;
+        }
+
+        .common{
             width: 200px;
             height: 200px;
             background-color: aqua;
+            position: absolute;
+            top: 0;
+            left: 0;
+            backface-visibility: hidden;
+            transition: all .8s ease;
         }
 
-        div:not(:last-child){
+        .test{
+            transform: rotateY(180deg);
+            background-color: #245c66;
+        }
+
+        .main:hover .transform{
+            transform: rotateY(-180deg);
+        }
+
+        .main:hover .test{
+            transform: rotateY(0);
+            background-color: blue;
+        }
+
+        .common:not(:last-child){
             margin-bottom: 5px;
         }
 
-        .main{
-            transition: all .2s;
-            text-align: center;
-        }
+    /* End Rotating Card */
 
         .paragraph{
             /* width: 200px; */
@@ -56,6 +87,8 @@
             /* transform: skewX(20deg) scaleY(1.5); */
             transform: skewY(3deg) skew(10deg) scale(1.2);
         }
+
+        
     </style>
 </head>
 <body>
@@ -69,9 +102,13 @@
     <div></div>
      -->
      <section class="main">
-        <div class="transform"></div>
-        <div class="test"></div>
-        <p class="paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="common transform">
+            Front
+        </div>
+        <div class="common test">
+            Back
+        </div>
+        <!-- <p class="paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p> -->
      </section>
     </body>
 </html>
