@@ -9,6 +9,7 @@
         height: 52rem;
         transition: all .8s ease;
         position: absolute;
+        overflow: hidden;
         top: 0;
         left: 0;
         width: 100%;
@@ -25,6 +26,14 @@
             
             &-1{
                 background-image: linear-gradient(to right , $color-secondary-light , $color-secondary-dark);
+            }
+
+            &-2{
+                background-image: linear-gradient(to right , $color-primary-light , $color-primary-dark);
+            }
+
+            &-3{
+                background-image: linear-gradient(to right , $color-tertiary-light , $color-tertiary-dark);
             }
         }
     }
@@ -44,17 +53,19 @@
         background-blend-mode: screen;
         -webkit-clip-path: polygon(0 0 , 100% 0 , 100% 85% , 50% 90% ,0% 100%);
         clip-path: polygon(0 0 , 100% 0 , 100% 85% , 50% 90% ,0% 100%);
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
 
         &--1{
             background-image: linear-gradient(to right , $color-secondary-light , $color-secondary-dark), url(../../img/nat-5.jpg);
         }
 
         &--2{
-            background-image: linear-gradient(to right , $color-secondary-light , $color-secondary-dark), url(../../img/nat-5.jpg);
+            background-image: linear-gradient(to right , $color-primary-light , $color-primary-dark), url(../../img/nat-6.jpg);
         }
 
         &--3{
-            background-image: linear-gradient(to right , $color-secondary-light , $color-secondary-dark), url(../../img/nat-5.jpg);
+            background-image: linear-gradient(to right , $color-tertiary-light , $color-tertiary-dark), url(../../img/nat-7.jpg);
         }
     }
 
@@ -67,7 +78,7 @@
         position: absolute;
         top: 12rem;
         right: 2rem;
-        width: 50%;
+        width: 75%;
     }
 
     &__heading-span{
@@ -77,6 +88,14 @@
 
         &--1{
             background-image: linear-gradient(to right bottom ,rgba($color-secondary-light , .85) , rgba($color-secondary-dark , .85));
+        }
+
+        &--2{
+            background-image: linear-gradient(to right bottom ,rgba($color-primary-light , .85) , rgba($color-primary-dark , .85));
+        }
+
+        &--3{
+            background-image: linear-gradient(to right bottom ,rgba($color-tertiary-light , .85) , rgba($color-tertiary-dark , .85));
         }
     }
 
@@ -107,37 +126,77 @@
         top: 50%;
         left: 50%;
         transform: translate(-50% , -50%);
+        width: 90%;
+        text-align: center;
+    }
+
+    &__price-box{
+        // text-align: center;
+        color: $color-primary-white;
+        margin-bottom: 8rem;
+    }
+
+    &__price-only{
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+
+    &__price-value{
+        font-size: 6rem;
+        font-weight: 100;
+        
     }
 }
 
 // // Testing button Created 
-// .btn2{
-//     &:link ,
+// .btn3{
+//     &:link,
 //     &:visited{
-//         text-transform: uppercase;
 //         text-decoration: none;
-//         padding: 1.5rem 4rem;
+//         font-size: 1.6rem;
+//         width: 15rem;
+//         height: 10rem;
 //         display: inline-block;
-//         border-radius: 10rem;
-//         transition: all 0.2s;
+//         padding: 1rem;
 //         position: relative;
-//         font-size: $default-font-size;
+//         background-color: $color-primary-white;
+//         // border-radius: 2rem;
 //     }
-    
+
 //     &:hover{
 //         transform: translateY(-.3rem);
-//         box-shadow: 0rem 1rem 2rem rgba($color-black, 0.2);
+//         box-shadow: 0 1rem 2rem rgba($color-black, .15);
+        
 
 //         &::after{
-//             background-color: $color-primary-white;
-//             color: $color-grey-dark;
 //             transform: scaleX(1.4) scaleY(1.6);
 //             opacity: 0;
 //         }
 //     }
-    
+
 //     &:active{
 //         transform: translateY(-.1rem);
-//         box-shadow: 0rem .5rem 1rem rgba($color-black, 0.2);
+//     }
+
+//     &::after{
+//         content: "";
+//         display: inline-block;
+//         position: absolute;
+//         height: 100%;
+//         width: 100%;
+//         top: 0;
+//         left: 0;
+//         z-index: -1;
+//         background-color: cyan;
+
+//     }
+
+//     &__color-grey{
+//         background-color: $color-primary-white;
+//         color: $color-grey-dark;
+
+//         &::after{
+//             background-color: $color-primary-white;
+//         }
 //     }
 // }

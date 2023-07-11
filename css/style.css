@@ -105,6 +105,12 @@ body {
 .u-margin-bottom-big {
   margin-bottom: 8rem; }
 
+.u-margin-top-big {
+  margin-top: 8rem; }
+
+.u-margin-top-huge {
+  margin-top: 10rem; }
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -131,6 +137,12 @@ body {
   color: #777; }
   .btn--white::after {
     background-color: #fff; }
+
+.btn--green {
+  background-color: #55c57a;
+  color: #fff; }
+  .btn--green::after {
+    background-color: #55c57a; }
 
 .btn::after {
   content: "";
@@ -178,6 +190,7 @@ body {
     height: 52rem;
     transition: all .8s ease;
     position: absolute;
+    overflow: hidden;
     top: 0;
     left: 0;
     width: 100%;
@@ -190,6 +203,10 @@ body {
       transform: rotateY(180deg); }
       .card__side--back-1 {
         background-image: linear-gradient(to right, #ff7730, #ffb900); }
+      .card__side--back-2 {
+        background-image: linear-gradient(to right, #7ed56f, #28b485); }
+      .card__side--back-3 {
+        background-image: linear-gradient(to right, #5643fa, #2998ff); }
   .card:hover .card__side--front {
     transform: rotateY(-180deg); }
   .card:hover .card__side--back {
@@ -199,13 +216,15 @@ body {
     height: 23rem;
     background-blend-mode: screen;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 90%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 90%, 0% 100%); }
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 90%, 0% 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px; }
     .card__picture--1 {
       background-image: linear-gradient(to right, #ff7730, #ffb900), url(../../img/nat-5.jpg); }
     .card__picture--2 {
-      background-image: linear-gradient(to right, #ff7730, #ffb900), url(../../img/nat-5.jpg); }
+      background-image: linear-gradient(to right, #7ed56f, #28b485), url(../../img/nat-6.jpg); }
     .card__picture--3 {
-      background-image: linear-gradient(to right, #ff7730, #ffb900), url(../../img/nat-5.jpg); }
+      background-image: linear-gradient(to right, #5643fa, #2998ff), url(../../img/nat-7.jpg); }
   .card__heading {
     font-size: 2.8rem;
     font-weight: 300;
@@ -215,13 +234,17 @@ body {
     position: absolute;
     top: 12rem;
     right: 2rem;
-    width: 50%; }
+    width: 75%; }
   .card__heading-span {
     padding: 1rem 1.5rem;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone; }
     .card__heading-span--1 {
       background-image: linear-gradient(to right bottom, rgba(255, 119, 48, 0.85), rgba(255, 185, 0, 0.85)); }
+    .card__heading-span--2 {
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85)); }
+    .card__heading-span--3 {
+      background-image: linear-gradient(to right bottom, rgba(86, 67, 250, 0.85), rgba(41, 152, 255, 0.85)); }
   .card__details {
     padding: 3rem; }
     .card__details ul {
@@ -238,7 +261,18 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center; }
+  .card__price-box {
+    color: #fff;
+    margin-bottom: 8rem; }
+  .card__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase; }
+  .card__price-value {
+    font-size: 6rem;
+    font-weight: 100; }
 
 .composition {
   position: relative; }
@@ -284,6 +318,30 @@ body {
     color: transparent; }
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.03); }
+
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: 1.6rem;
+  transform: skewx(-12deg); }
+  .story > * {
+    transform: skewX(12deg); }
+  .story__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(12deg); }
+  .story__img {
+    height: 100%; }
 
 .row {
   max-width: 114rem;
@@ -356,5 +414,9 @@ body {
 
 .section-tour {
   background-color: #f7f7f7;
-  padding: 25rem 0;
+  padding: 25rem 0 15rem 0;
   margin-top: -8rem; }
+
+.section-stories {
+  padding: 15rem 0;
+  background-color: #f7f7f7; }
