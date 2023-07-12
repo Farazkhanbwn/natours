@@ -26,89 +26,60 @@
         }
     </style> -->
     <style>
-
         *{
             padding: 0;
             margin: 0;
+            box-sizing: border-box;
         }
         
-        .main{
-            position: relative;
-            text-align: center;
-            perspective: 1500px;
-            height: 200px;
-            width: 200px;
-            -webkit-perspective: 1500px;
+        .btn-test{
+            margin: 5rem;
+            width: 100%;
+            height: 100vh;
         }
 
-        .common{
-            width: 200px;
-            height: 200px;
-            background-color: aqua;
-            position: absolute;
-            top: 0;
-            left: 0;
-            backface-visibility: hidden;
-            transition: all .8s ease;
-        }
-
-        .test{
-            transform: rotateY(180deg);
-            background-color: #245c66;
-        }
-
-        .main:hover .transform{
-            transform: rotateY(-180deg);
-        }
-
-        .main:hover .test{
-            transform: rotateY(0);
-            background-color: blue;
-        }
-
-        .common:not(:last-child){
-            margin-bottom: 5px;
-        }
-
-    /* End Rotating Card */
-
-        .paragraph{
-            /* width: 200px; */
-            /* height: 50px; */
+        .btn{
+            text-decoration: none;
+            color: blue;
+            font-size: 1.6rem;
+            background-color: rgb(202, 198, 198);
             display: inline-block;
-            font-weight: 700;
-            font-size: 20px;
-            background-image: linear-gradient(to right , rgb(47, 109, 104) , rgb(48, 163, 179));
-            -webkit-background-clip: text;
-            color: transparent;
+            padding: 1rem 1.5rem;
+            position: relative;
+            border-radius: 3rem;
+          
         }
 
-        .paragraph:hover{
-            /* transform: skewX(20deg) scaleY(1.5); */
-            transform: skewY(3deg) skew(10deg) scale(1.2);
+        .btn:hover{
+            transform: translateY(-.3rem);
+            color: yellow;
         }
 
-        
+        .btn:hover::after{
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+
+        .btn::after{
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all 0.4s;
+        background-color: yellow;
+    }
     </style>
 </head>
 <body>
-    <!-- <section class="testing-class">
-        <div style="float: left; opacity: 0.3;background-color: blue;"></div>
-        <div ></div>
-        <div style="float: left; background-color: rgb(204, 204, 107);"></div>
-        <div style="float: left; background-color: rgb(204, 204, 107);"></div>
-        <div></div>
-    </section>
-    <div></div>
-     -->
-     <section class="main">
-        <div class="common transform">
-            Front
-        </div>
-        <div class="common test">
-            Back
-        </div>
-        <!-- <p class="paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p> -->
-     </section>
-    </body>
+    <div class="btn-test">
+        <a href="#" class="btn btn--white">
+            Move to Next
+        </a>
+    </div>
+</body>
 </html>
