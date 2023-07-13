@@ -16,7 +16,6 @@
         display: block;
         width: 90%;
         transition: all .3s;
-        
 
         &:focus{
             outline: none;
@@ -75,7 +74,6 @@
         position: absolute;
         top: -.4rem;
         left: 0;
-
 
         &::after{
             content: "";
