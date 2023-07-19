@@ -120,6 +120,10 @@
         }
     }
 
+    &__details{
+        padding: 1rem 3rem;
+    }
+
     //Front Side Styling
     &__cta{
         position: absolute;
@@ -146,57 +150,46 @@
         font-weight: 100;
         
     }
-}
 
-// // Testing button Created 
-// .btn3{
-//     &:link,
-//     &:visited{
-//         text-decoration: none;
-//         font-size: 1.6rem;
-//         width: 15rem;
-//         height: 10rem;
-//         display: inline-block;
-//         padding: 1rem;
-//         position: relative;
-//         background-color: $color-primary-white;
-//         // border-radius: 2rem;
-//     }
+    @include respond(tab-portrait){
+        height: auto;
+        border-radius: 3px;
+        background-color: $color-primary-white;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
 
-//     &:hover{
-//         transform: translateY(-.3rem);
-//         box-shadow: 0 1rem 2rem rgba($color-black, .15);
+        &__side{
+            font-size: 2rem;
+            height: auto;
+            position: relative;
+            box-shadow: none;
+            
         
+            &--back{
+                transform: rotateY(0);
+                clip-path: polygon(0 15% , 100% 0% , 100% 100% , 0 100%);
+            }
+        }
 
-//         &::after{
-//             transform: scaleX(1.4) scaleY(1.6);
-//             opacity: 0;
-//         }
-//     }
+        &:hover &__side--front{
+            transform: rotateY(0);
+        }
 
-//     &:active{
-//         transform: translateY(-.1rem);
-//     }
+        //Front Side Styling
+        &__cta{
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translate(0);
+            width: 100%;
+            padding: 7rem 4rem 4rem;
+        }
 
-//     &::after{
-//         content: "";
-//         display: inline-block;
-//         position: absolute;
-//         height: 100%;
-//         width: 100%;
-//         top: 0;
-//         left: 0;
-//         z-index: -1;
-//         background-color: cyan;
+        &__price-box{
+            margin-bottom: 3rem;
+        }
 
-//     }
-
-//     &__color-grey{
-//         background-color: $color-primary-white;
-//         color: $color-grey-dark;
-
-//         &::after{
-//             background-color: $color-primary-white;
-//         }
-//     }
-// }
+        &__price-value{
+            font-size: 4rem;            
+        }
+    }
+}
