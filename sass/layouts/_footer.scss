@@ -4,12 +4,17 @@
     font-size: 1.4rem;
     color: $color-grey-light-1;
 
-    // @include respond(tab-portrait){
-    //     padding: 8rem 0;
-    // }
+    @include respond(tab-portrait){
+        padding: 8rem 0;
+        margin-bottom: 8rem;
+    }
 
     &__logo-box{
         text-align: center;
+
+        @include respond(tab-portrait){
+            margin-bottom: 6rem;
+        }
     }
 
     &__logo{
@@ -22,10 +27,10 @@
         padding-top: 2rem;
         display: inline-block;
 
-        // @include respond(tab-portrait){
-        //     width: 100%;
-        //     text-align: center;
-        // }
+        @include respond(tab-portrait){
+            width: 100%;
+            text-align: center;
+        }
     }
 
     &__list{
@@ -65,9 +70,9 @@
         width: 80%;
         float: right;
 
-        // @include respond(tab-portrait){
-        //     width: 100%;
-        //     float: none;
-        // }
+        @include respond(tab-portrait){
+            width: 100%;
+            float: none;
+        }
     }
 }
