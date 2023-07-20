@@ -419,7 +419,8 @@ body {
     display: inline-block;
     background-image: linear-gradient(to right, #7ed56f, #28b485);
     -webkit-background-clip: text;
-    color: transparent; }
+    color: transparent;
+    opacity: 1; }
     @media (max-width: 56.25em) {
       .feature-box__icon {
         margin-bottom: 0; } }
