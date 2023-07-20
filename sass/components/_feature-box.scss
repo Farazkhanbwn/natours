@@ -19,7 +19,6 @@
         background-image: linear-gradient(to right , $color-primary-light , $color-primary-dark);
         -webkit-background-clip: text;
         color: transparent;
-        opacity: 1;
 
         @include respond(tab-portrait){
             margin-bottom: 0;
