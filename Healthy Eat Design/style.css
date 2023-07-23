@@ -10,51 +10,48 @@
     box-sizing: border-box;
 }
 
+a
+{
+    text-decoration: none;
+    display: inline-block;
+}
+
+button{
+    font-family: inherit;
+}
 /* basic styling */
 
 html{
-    font-family: 'Roboto' , sans-serif;
-    font-weight: 400;
     font-size: 10px;
 }
 
-/* common styles */
-.bg-hover {
-    /* background-color: black; */
+body{
+    font-family: 'Roboto' , sans-serif;
+    font-weight: 400;
 }
 
+/* common styles */
+.bg-hover{
+    position: relative;
+}
 
-.navigation__item::after{
+.bg-hover::after{
     content: "";
     display: inline-block;
-    width: 100%;
+    width: 0%;
     height: 100%;
     position: absolute;
+    background: var(--col-primary);
     top: 0;
     left: 0;
-    /* background-color: var(--col-primary); */
-    background-image: linear-gradient(90deg , var(--col-primary) 50% , transparent 50%);
     z-index: -1;
+    border-radius: .3rem;
+    transition: all .8s;
 }
 
-.navigation__item::after:hover{
-    background-image: linear-gradient(90deg , var(--col-primary) 100% , transparent 50%);
+.bg-hover:hover::after{
+    width: 50%;
 }
-/* .bg-hover::after{
-    content: "";
-    display: table;
-    clear: both;
-    position: absolute;
-    display: inline-block;
-    top: 0;
-    left: 0;
-    background-color: var(--col-primary);
-    z-index: 10;
-} */
-
-/* .bg-hover::after {
-    color: rgb(52, 196, 196);
-} */
 
 /* header */
 
@@ -87,14 +84,14 @@ html{
 .navigation__item{
     display: inline-block;
     margin-right: 2rem;
-    padding: .5rem;
-    position: relative;
+    
 }
 
 .navigation__link{
     text-decoration: none;
     display: inline-block;
     color: #333;
+    padding: 1rem;
     /* position: relative; */
 }
 
